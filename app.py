@@ -23,4 +23,4 @@ article="<p></p>"
 examples = ['Grey-cat.jpeg']
 
 
-gr.Interface(fn=predict,inputs=gr.Image(),outputs=gr.Label,title=title,description=description,article=article,examples=examples).launch(share=True)
+gr.Interface(fn=predict,inputs=gr.Image(),outputs="label",title=title,description=description,article=article,examples=examples).launch(share=True)
