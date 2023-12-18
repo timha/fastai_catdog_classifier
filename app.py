@@ -20,7 +20,7 @@ def predict(img):
 title = "Cat or Dog classifier"
 description = "A Cat or Dog classifier trained on the _ dataset with fastai. Created as a demo for Gradio and HuggingFace Spaces."
 article="<p></p>"
-examples = ['Grey-cat.jpeg']
+examples = ['Grey-cat1.jpeg']
 
 
 gr.Interface(fn=predict,inputs=gr.Image(),outputs="label",title=title,description=description,article=article,examples=examples).launch(share=True)
