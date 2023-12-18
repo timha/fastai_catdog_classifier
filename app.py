@@ -20,7 +20,7 @@ title = "Pet Breed Classifier"
 description = "A pet breed classifier trained on the Oxford Pets dataset with fastai. Created as a demo for Gradio and HuggingFace Spaces."
 article="<p style='text-align: center'><a href='https://tmabraham.github.io/blog/gradio_hf_spaces_tutorial' target='_blank'>Blog post</a></p>"
 examples = ['grey-cat.jpeg']
-interpretation='default'
-enable_queue=True
+# interpretation='default'
+# enable_queue=True
 
-gr.Interface(fn=predict,inputs=gr.Image(),outputs=gr.Label(num_top_classes=3),title=title,description=description,article=article,examples=examples,interpretation=interpretation,enable_queue=enable_queue).launch()
+gr.Interface(fn=predict,inputs=gr.Image(),outputs=gr.Label(num_top_classes=3),title=title,description=description,article=article,examples=examples).launch()
