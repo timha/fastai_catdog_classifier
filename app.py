@@ -6,18 +6,19 @@ import skimage
 def is_cat(x): return x[0].isupper()
 learn = load_learner('model.pkl')
 
-labels = learn.dls.vocab
+categories = ('Dog', 'Cat')
 
 def predict(img):
     img = PILImage.create(img)
 
     # Resize image if necessary
-    img = img.resize((512, 512))
+    img = img.resize((192, 192))
     pred,pred_idx,probs = learn.predict(img)
-    return {labels[i]: float(probs[i]) for i in range(len(labels))}
+    return dict(zip(categories, map(float, probs)))
 
-title = "Pet Breed Classifier"
-description = "A pet breed classifier trained on the Oxford Pets dataset with fastai. Created as a demo for Gradio and HuggingFace Spaces."
+
+title = "Cat or Dog classifier"
+description = "A Cat or Dog classifier trained on the _ dataset with fastai. Created as a demo for Gradio and HuggingFace Spaces."
 article="<p></p>"
 examples = ['Grey-cat.jpeg']
 
