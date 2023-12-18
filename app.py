@@ -18,9 +18,8 @@ def predict(img):
 
 title = "Pet Breed Classifier"
 description = "A pet breed classifier trained on the Oxford Pets dataset with fastai. Created as a demo for Gradio and HuggingFace Spaces."
-article="<p style='text-align: center'><a href='https://tmabraham.github.io/blog/gradio_hf_spaces_tutorial' target='_blank'>Blog post</a></p>"
-examples = ['grey-cat.jpeg']
-# interpretation='default'
-# enable_queue=True
+article="<p></p>"
+examples = ['Grey-cat.jpeg']
 
-gr.Interface(fn=predict,inputs=gr.Image(),outputs=gr.Label(num_top_classes=3),title=title,description=description,article=article,examples=examples).launch()
+
+gr.Interface(fn=predict,inputs=gr.Image(),outputs=labels,title=title,description=description,article=article,examples=examples).launch(share=True)
