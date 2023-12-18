@@ -20,4 +20,4 @@ examples = ['grey-cat.jpeg']
 interpretation='default'
 enable_queue=True
 
-gr.Interface(fn=predict,inputs=gr.inputs.Image(shape=(512, 512)),outputs=gr.outputs.Label(num_top_classes=3),title=title,description=description,article=article,examples=examples,interpretation=interpretation,enable_queue=enable_queue).launch()
+gr.Interface(fn=predict,inputs=gr.Image(shape=(512, 512)),outputs=gr.Label(num_top_classes=3),title=title,description=description,article=article,examples=examples,interpretation=interpretation,enable_queue=enable_queue).launch()
